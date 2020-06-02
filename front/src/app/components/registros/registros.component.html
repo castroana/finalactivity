@@ -1,0 +1,35 @@
+<div>
+    <form #insertarRegistrosForm="ngForm" (ngSubmit)= "insertarRegistro()">
+        <input type="text" id="nombre" placeholder="Nombre" required
+        #NombreEstudiante="ngModel" name="nombreEstudiante" [(ngModel)]
+        ="registroInsertado.NombreEstudiante">
+        <br>
+        <input type="text" id="facultad" placeholder="Facultad" required
+        #Facultad="ngModel" name="facultad" [(ngModel)]
+        ="registroIngresado.Facultad">
+        <br>
+        <input type="text" id="estado"placeholder="EstadoEstudiante" required
+        #EstadoEstudiante="ngModel" name="EstadoEstudiante" [(ngModel)]
+        ="registroInsertado.EstadoEstudiante">
+        <br>
+        <br>
+        <button type="submit" class="boton">Enviar</button>
+    </form>
+</div>
+
+<div *ngFor= "let registro of RegistrosInsertados">
+    <form #insertarRegistrosForm = "ngForm">
+    <input type = "text" id="nombre" required #NombreEstudiante= 
+    "ngModel" name="NombreEstudiante" [(ngModel)]="registro.NombreEstudiante">
+     <br>
+     <input type = "text" id="registro" required #Facultad= 
+     "ngModel" name="Facultad" [(ngModel)]="Faculttad">
+
+
+    </form>
+
+
+
+
+
+</div>
